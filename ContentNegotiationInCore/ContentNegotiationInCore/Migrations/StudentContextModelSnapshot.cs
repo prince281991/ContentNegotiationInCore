@@ -28,8 +28,9 @@ namespace ContentNegotiationInCore.Migrations
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
-                    b.Property<long>("City")
-                        .HasColumnType("bigint");
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<long>("Contact")
                         .HasColumnType("bigint");

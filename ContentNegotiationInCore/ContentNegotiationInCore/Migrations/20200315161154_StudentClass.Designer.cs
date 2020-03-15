@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContentNegotiationInCore.Migrations
 {
     [DbContext(typeof(StudentContext))]
-    [Migration("20200315155910_Student")]
-    partial class Student
+    [Migration("20200315161154_StudentClass")]
+    partial class StudentClass
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,8 +30,9 @@ namespace ContentNegotiationInCore.Migrations
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
-                    b.Property<long>("City")
-                        .HasColumnType("bigint");
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<long>("Contact")
                         .HasColumnType("bigint");

@@ -18,6 +18,6 @@ namespace ContentNegotiationInCore.Models
         [Required]
         public long Contact { get; set; }
         [Required]
-        public long City { get; set; }
+        public string City { get; set; }
     }
 }
